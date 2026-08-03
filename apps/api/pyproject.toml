@@ -20,3 +20,13 @@ build-backend = "uv_build"
 
 [tool.uv.sources]
 shared = {workspace = true}
+
+[tool.hatch.build.target.wheel]
+packages = ["src/api"]
+
+[tool.hatch.build.target.sdist]
+include=[
+    "src/",
+    "tests/",
+    "README.md",
+]
